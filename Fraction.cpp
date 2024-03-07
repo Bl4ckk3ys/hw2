@@ -1,4 +1,5 @@
 #include "Fraction.h"
+#include <string.h> 
 
 Fraction::Fraction(int32_t num,uint32_t denom){
   _num = num;
@@ -8,6 +9,15 @@ Fraction::Fraction(double realFract){
     _num = realFract/10;
     _denom = 10;
    
+}
+void after_point(unsigned int a){
+  int zero_count = 0, overall_count = 0;
+  while(zero_count < 5){
+    a*=10;
+    overall_count++;
+    if(a % 10 == 0) zero_count++;
+    else zero_count = 0;
+  }
 }
 
 unsigned int NOD(unsigned int a, unsigned int b) {
