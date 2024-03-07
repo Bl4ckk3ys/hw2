@@ -3,7 +3,7 @@
 
 int main(){
     Fraction fraction1(10,20);
-    fraction1.Reduce();
-    fraction1.Print();
-    
+    std::cout << fraction1 << std::endl;
+    Fraction fraction2(-1.5);
+    std::cout << fraction2 << std::endl;
 }
